@@ -11,10 +11,11 @@ void add_data(FILE *students, student student)
     printf("Enter his/her average ");
     scanf("%f", &student.average);
 
-    students = fopen("students.txt", "a");
-    fprintf(students, "First name: %s", student.Fname);
-    fprintf(students, "\tLast name: %s", student.Lname);
-    fprintf(students, "\tThe group is:%d", student.group);
-    fprintf(students, "\t Average is: %.2f\n", student.average);
+    students = fopen("students.txt", "a+");
+    fprintf(students, "First name: %s\n", student.Fname);
+    fprintf(students, "Last name: %s\n", student.Lname);
+    fprintf(students, "The group is:%d\n", student.group);
+    fprintf(students, "Average is: %.2f\n", student.average);
+    fprintf(students, "===========================\n");
     fclose(students);
 }

@@ -14,4 +14,5 @@ typedef struct
 
 int data_menu();
 void add_data(FILE *, student);
+void show_all_data(FILE *);
 #endif

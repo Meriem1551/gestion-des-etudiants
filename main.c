@@ -12,8 +12,8 @@ int main(void)
             add_data(students, s);
         // if (choice == 2)
         // search_by_grp();
-        //  if (choice == 3)
-        //      show_all_data();
+        if (choice == 3)
+            show_all_data(students);
         //  if (choice == 4)
         //      sort_data();
         //  if (choice == 5)

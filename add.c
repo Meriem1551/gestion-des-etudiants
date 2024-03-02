@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * add_data - adds student s to a file
+ * @students : file name
+ * @student : struct
+ */
+
 void add_data(FILE *students, student student)
 {
     printf("Enter his/her first name ");
@@ -12,6 +18,8 @@ void add_data(FILE *students, student student)
     scanf("%f", &student.average);
 
     students = fopen("students.txt", "a+");
+    if (students == NULL)
+        return;
     fprintf(students, "First name: %s\n", student.Fname);
     fprintf(students, "Last name: %s\n", student.Lname);
     fprintf(students, "The group is:%d\n", student.group);

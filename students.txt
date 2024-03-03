@@ -1,15 +1,15 @@
-First name: Boussaid
-Last name: Meriem
+First name:Boussaid
+Last name:Meriem
 The group is:3
-Average is: 15.77
+Average is:15.77
 ===========================
-First name: Omar
-Last name: Hafsa
+First name:Omar
+Last name:Hafsa
 The group is:3
-Average is: 12.23
+Average is:12.23
 ===========================
-First name: Boutheldja
-Last name: Kaouther
+First name:Boutheldja
+Last name:Kaouther
 The group is:3
-Average is: 15.75
+Average is:15.75
 ===========================

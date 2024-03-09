@@ -8,9 +8,9 @@ int data_menu()
     printf("\t1 - Add a new student.\n");
     printf("\t2 - Search for a specific student by first name.\n");
     printf("\t3 - Display all students data.\n");
-    printf("\t3 - Sort all students.\n");
-    printf("\t4 - Delete a student.\n");
-    printf("\t0 - to exit.\n");
+    printf("\t4 - Sort all students.\n");
+    printf("\t5 - Delete a student.\n");
+    printf("\t0 - exit.\n");
     scanf("%d", &choice);
     return choice;
 }

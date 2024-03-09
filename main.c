@@ -4,8 +4,7 @@ int main(void)
 {
     FILE *students;
     student s;
-    int choice;
-    int found = 0;
+    int choice, found = 0;
     char fn[50];
     do
     {
@@ -25,7 +24,7 @@ int main(void)
             show_all_data(students);
             break;
         case 4:
-            // sort_data();
+            sort_data(students);
             break;
         case 5:
             // delete_data();

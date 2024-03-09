@@ -4,7 +4,7 @@ int main(void)
 {
     FILE *students;
     student s;
-    int choice, found = 0;
+    int choice, index;
     char fn[50];
     do
     {
@@ -17,8 +17,9 @@ int main(void)
         case 2:
             printf("Enter the First name of the student you're looking for ");
             scanf("%s", &fn);
-            found = search_by_fname(students, fn);
-            printf("%d\n", found);
+            index = search_by_fname(students, fn);
+            if (index != -1)
+                printf("found");
             break;
         case 3:
             show_all_data(students);
@@ -27,7 +28,9 @@ int main(void)
             sort_data(students);
             break;
         case 5:
-            // delete_data();
+            // printf("enter the student's name to delete");
+            // scanf("%d", &fn);
+            // delete_student(students, fn);
             break;
         }
     } while (choice != 0);

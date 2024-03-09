@@ -12,7 +12,7 @@
 int search_by_fname(FILE *students, char fn[50])
 {
     char data[100];
-    int len;
+    int len, num_s = 0;
     students = fopen("students.txt", "r");
     if (students == NULL)
     {
@@ -27,11 +27,16 @@ int search_by_fname(FILE *students, char fn[50])
         {
             data[len - 1] = '\0';
         }
+        if (strstr(data, "===========================") != NULL)
+        {
+            num_s++;
+            continue;
+        }
         data[0] = tolower(data[0]);
         fn[0] = tolower(fn[0]);
         if (strcmp(data, fn) == 0)
-            return 1;
+            return num_s;
     }
-    return 0;
+    return -1;
     fclose(students);
 }

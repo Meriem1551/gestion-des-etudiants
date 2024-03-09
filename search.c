@@ -12,7 +12,7 @@
 int search_by_fname(FILE *students, char fn[50])
 {
     char data[100];
-    char *token;
+    int len;
     students = fopen("students.txt", "r");
     if (students == NULL)
     {
@@ -22,18 +22,15 @@ int search_by_fname(FILE *students, char fn[50])
     while (!feof(students))
     {
         fgets(data, sizeof(data), students);
-        if (strstr(data, "===========================") != NULL)
+        len = strlen(data);
+        if (len > 0 && data[len - 1] == '\n')
         {
-            continue;
+            data[len - 1] = '\0';
         }
-        token = strtok(data, ":");
-        if (token != NULL)
-        {
-            token = strtok(NULL, ":");
-            token[strcspn(token, "\n")] = '\0';
-            if (strcmp(token, fn) == 0)
-                return 1;
-        }
+        data[0] = tolower(data[0]);
+        fn[0] = tolower(fn[0]);
+        if (strcmp(data, fn) == 0)
+            return 1;
     }
     return 0;
     fclose(students);

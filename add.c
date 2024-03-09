@@ -20,10 +20,10 @@ void add_data(FILE *students, student student)
     students = fopen("students.txt", "a+");
     if (students == NULL)
         return;
-    fprintf(students, "First name: %s\n", student.Fname);
-    fprintf(students, "Last name: %s\n", student.Lname);
-    fprintf(students, "The group is:%d\n", student.group);
-    fprintf(students, "Average is: %.2f\n", student.average);
+    fprintf(students, "%s\n", student.Fname);
+    fprintf(students, "%s\n", student.Lname);
+    fprintf(students, "%d\n", student.group);
+    fprintf(students, "%.2f\n", student.average);
     fprintf(students, "===========================\n");
     fclose(students);
 }

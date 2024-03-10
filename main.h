@@ -18,4 +18,5 @@ void add_data(FILE *, student);
 void show_all_data(FILE *);
 int search_by_fname(FILE *, char[]);
 void sort_data(FILE *);
+void delete_student(FILE *, char[]);
 #endif

@@ -19,7 +19,7 @@ int main(void)
             scanf("%s", &fn);
             index = search_by_fname(students, fn);
             if (index != -1)
-                printf("found");
+                printf("found\n");
             break;
         case 3:
             show_all_data(students);
@@ -28,9 +28,9 @@ int main(void)
             sort_data(students);
             break;
         case 5:
-            // printf("enter the student's name to delete");
-            // scanf("%d", &fn);
-            // delete_student(students, fn);
+            printf("enter the student's name to delete ");
+            scanf("%s", &fn);
+            delete_student(students, fn);
             break;
         }
     } while (choice != 0);
